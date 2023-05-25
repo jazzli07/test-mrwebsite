@@ -41,9 +41,9 @@
 </body>
 
 <script>
-  let randomNumber = Math.floor(Math.random() *100) + 1; //para tomar un numero de 1 a 100, el + 1 es para que inicie del intento 1 
+  let randomNumber = Math.random() * 10;
 
-  const ATTEMPS = 10;//Se cambio el numero 5 por 10 porque esto indica el numero de intentos
+  const ATTEMPS = 5;
   const guesses = document.querySelector('.guesses');
   const lastResult = document.querySelector('.lastResult');
   const lowOrHi = document.querySelector('.lowOrHi');//faltaba un punto para indicar que se trataba de la misma variable que es una clase en el codigo html
@@ -72,7 +72,7 @@
       setGameOver();
     } else {
       lastResult.textContent = 'Incorrecto! ';
-      lastResult.style.backgroundColor = 'black';//Se modifico el color para mostrar que es incorrecto el numero
+      lastResult.style.backgroundColor = 'green';
       if(userGuess < randomNumber) {
         lowOrHi.textContent = 'El número es menor!';//Se cambio de mayor a menor porque la instruccion con el < asi lo indicaba. 
       } else if(userGuess > randomNumber) {
